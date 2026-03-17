@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bye Bye Jia! 🎀 Clarion Family</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-soft: #fce4ec;
+            --pink-accent: #f06292;
+            --clarion-blue: #0288d1;
+            --cream: #fff9fb;
+        }
+
+        body {
+            background-color: var(--pink-soft);
+            font-family: 'Poppins', sans-serif;
+            color: #5d4037;
+            margin: 0;
+            overflow-x: hidden;
+            text-align: center;
+            cursor: url('https://img.icons8.com/color/32/pink-ribbon.png'), auto;
+        }
+
+        header {
+            padding: 60px 20px;
+            background: white;
+            border-bottom: 5px dotted var(--pink-accent);
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            color: var(--pink-accent);
+            margin: 0;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--clarion-blue);
+            font-weight: 600;
+        }
+
+        /* Seksi Surat */
+        .office-squad {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .envelope {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            border: 2px solid var(--pink-accent);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .envelope:hover {
+            transform: scale(1.05) rotate(1deg);
+            background: var(--cream);
+        }
+
+        .envelope::after {
+            content: '🎀';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.8rem;
+        }
+
+        .sender-name {
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--pink-accent);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .message {
+            display: none;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-top: 15px;
+            border-top: 1px dashed var(--pink-accent);
+            padding-top: 15px;
+            color: #444;
+        }
+
+        /* ALBUM MEMORI (BARU) */
+        .album-section {
+            padding: 50px 20px;
+            background: #fffafa;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 15px 15px 40px 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .polaroid img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid #f1f1f1;
+        }
+
+        .polaroid p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #555;
+        }
+
+        .polaroid:nth-child(even) { transform: rotate(3deg); }
+        .polaroid:nth-child(odd) { transform: rotate(-3deg); }
+        .polaroid:hover { transform: rotate(0deg) scale(1.1); z-index: 10; }
+
+        /* Memories Section */
+        .memories-container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: left;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            border-left: 10px solid var(--clarion-blue);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .memory-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .memory-item::before {
+            content: '🌸';
+            margin-right: 15px;
+        }
+
+        /* Interactive Tools */
+        .interactive-box {
+            background: white;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 600px;
+            border-radius: 20px;
+            border: 3px dashed var(--pink-accent);
+        }
+
+        .btn-action {
+            background: var(--pink-accent);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .bow {
+            position: fixed;
+            top: -10%;
+            z-index: 999;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        footer {
+            padding: 60px;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bon Voyage, Jia! 🎀</h1>
+        <p class="subtitle">Official Farewell of Clarion's Creative Soul</p>
+		<p class="subtitle">JJJYYRRRR JANGGAL </p>
+    </header>
+
+    <section class="album-section">
+        <h2 style="font-family: 'Dancing Script'; font-size: 3rem; color: var(--pink-accent);">Jia’s Memory Album</h2>
+        <div class="gallery">
+            <div class="polaroid">
+                <img src="https://via.placeholder.com/200" alt="Foto 1">
+                <p>Momen Seru 1</p>
+            </div>
+            <div class="polaroid">
+                <img src="https://via.placeholder.com/200" alt="Foto 2">
+                <p>Momen Seru 2</p>
+            </div>
+            <div class="polaroid">
+                <img src="https://via.placeholder.com/200" alt="Foto 3">
+                <p>Momen Seru 3</p>
+            </div>
+            <div class="polaroid">
+                <img src="https://via.placeholder.com/200" alt="Foto 4">
+                <p>Momen Seru 4</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p style="margin-top: 30px; font-weight: 600;">Klik amplop di bawah untuk membaca pesan rahasia:</p>
+        <div class="office-squad">
+            <div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">Princess Laila</span><div class="message">"hi fans,iya tau lu pasti kangen sm gue gausa nangis ya bayi💅"</div></div>
+            <div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">Pita</span><div class="message">"hi kaum rakyat biasa ku! tetap jd cewe alay sepanjang masa dan jangan lupain bidadari yg secantik aku!"</div></div>
+            <div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">Ratna</span><div class="message">"SEE U JIAA! semoga semakin sukses kedepannya, kutunggu update an status tektokan mu"</div></div>
+            <div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">Yunita</span><div class="message">"semangat jia semoga bisa mendapatkan tempat yang lebi baik terimakasi untuk keceriannya"</div></div>
+            <div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">pria solo</span><div class="message">"bocil jangan terlalu songong ya, carila cowo seperti kakak mu ini "</div></div>
+            <div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">Fikri</span><div class="message">"lakukan kebaikan maka kebaikan akan datang kepadamu🔥"</div></div>
+            <div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">ultraman</span><div class="message">"jia nanti kucingmu aku racun😂"</div></div> 
+            <div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">Ony</span><div class="message">"a"</div></div>
+			<div class="envelope" onclick="toggleMessage(this)"><span class="sender-name">andri</span><div class="message">"jangan lupa beli meja biliard!"</div></div>
+        </div>
+    </section>
+
+    <div class="memories-container">
+        <h2 style="font-family: 'Dancing Script'; font-size: 2.5rem; color: var(--clarion-blue); text-align: center;">JIA Best Memories</h2>
+        <div class="memory-item">sipaling rajin dateng ke kantor</div>
+        <div class="memory-item">siapling maknya kucing kantor.</div>
+        <div class="memory-item">sipaling geprek</div>
+        <div class="memory-item">si paling bocil kematian</div>
+        <div class="memory-item">si paling anak gunung</div>
+		<div class="memory-item">si paling jamet</div>
+    </div>
+
+    <div class="interactive-box">
+        <h3 style="font-family: 'Dancing Script'; font-size: 2rem;">🎁 Special for Jia</h3>
+        <p id="excuse-text">"Butuh alasan random buat kangen Clarion?"</p>
+        <button class="btn-action" onclick="generateExcuse()">Generate Alasan</button>
+    </div>
+
+    <footer>
+        <p>Stay Coquette, Stay Awesome. <br> With Love, Clarion Team </p>
+    </footer>
+
+    <script>
+        function toggleMessage(element) {
+            const msg = element.querySelector('.message');
+            msg.style.display = (msg.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function generateExcuse() {
+            const excuses = [
+                "Maaf, gaperlu berangkat kerja panas-panas.",
+                "Harus balik sebentar, kangen sama Laila & Vita.",
+                "kangen ditanyain teknisi pas live.",
+                "pengen di gift yang banyak pas live.",
+                "kangen beli tahu kocek dan jajan sm temen temen"
+            ];
+            document.getElementById('excuse-text').innerText = excuses[Math.floor(Math.random() * excuses.length)];
+        }
+
+        function createBow() {
+            const bow = document.createElement('div');
+            bow.classList.add('bow');
+            bow.innerText = '🎀';
+            bow.style.left = Math.random() * 100 + 'vw';
+            bow.style.animationDuration = Math.random() * 3 + 2 + 's';
+            bow.style.opacity = Math.random();
+            bow.style.fontSize = Math.random() * 20 + 15 + 'px';
+            document.body.appendChild(bow);
+            setTimeout(() => bow.remove(), 5000);
+        }
+        setInterval(createBow, 400);
+    </script>
+</body>
+</html>
